@@ -726,8 +726,8 @@ function displayfiledir($wdir) {
                 $edittext = '';
             }
             if (is_editable_type($file->name) && $repo->can_edit()) {
-                $edittext .= " <a href=\"index.php?repoid=$repoid&amp;wdir=$wdir&amp;file=$file->".
-                    "filepath&amp;action=edit&amp;$linkparams\">$stredit</a>";
+                $edittext .= " <a href=\"index.php?repoid=$repoid&amp;wdir=$wdir&amp;file=$file->filepath".
+                    "&amp;action=edit&amp;$linkparams\">$stredit</a>";
             } else if (is_zipfile($file->name) && $repo->can_zip()) {
                 $edittext .= " <a href=\"index.php?repoid=$repoid&amp;wdir=$wdir&amp;file=$file->filepath".
                     "&amp;action=unzip&amp;sesskey=$USER->sesskey&amp;$linkparams\">$strunzip</a>&nbsp;";
